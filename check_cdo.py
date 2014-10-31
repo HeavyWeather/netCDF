@@ -1,5 +1,6 @@
 def check_cdo_available():
-    """ simple command for cdo checking, with error reporting specific to the Eddie supercomputing cluster """
+    """ simple command for cdo checking, with error reporting specific to the Eddie supercomputing cluster 
+    for more info on cdo: https://code.zmaw.de/projects/cdo"""
     import os,subprocess,sys
     try:
         subprocess.Popen(["cdo","-V"],stderr=subprocess.STDOUT,stdout=subprocess.PIPE).returncode
