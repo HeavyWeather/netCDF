@@ -13,7 +13,7 @@ def hadRM3_cut(startyr,nyrs,PATH,RUN,VAR,LATS,LONS):
   
 	import calendar, string
 	from netCDF4 import Dataset
-  from nCDF_basics import *
+  	from nCDF_basics import *
 
 	decades=string.ascii_letters
 	years=string.digits
