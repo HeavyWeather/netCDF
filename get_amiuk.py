@@ -1,8 +1,8 @@
 def get_amiuk(indx):
 
-	"""grabs all Agrometeorological Index (AMI) data for a single index (indx), 
-	horribly overspecified otherwise, might need config file or some way of determining
-	input dimensions."""
+	"""grabs all Agrometeorological Index (AMI) data for a single index ('indx'), and emplaces
+	it into asingle python array. Horribly overspecified otherwise, might need config file or 
+	some way of determining input dimensions."""
 	
 	from netCDF4 import Dataset
 	import numpy as np
@@ -25,7 +25,8 @@ def get_amiuk(indx):
 	#indx='phs_count'
 	odata = Dataset(obspath+'ami.wide.e-obs.22degrot.v7.1950.2010.nc','r',format='NETCDF3_CLASSIC')
 	index2=odata.variables[indx]
-	temp2=index2[:,0,:,:] #index[0:61,0,:,:]#comment out last two lines and swap this for only modelled indices
+	temp2=index2[:,0,:,:] #index[0:61,0,:,:]
+	#comment out last two lines and swap this for only modelled indices
 	#will need some measurement of length in indexing alldat to ensure first period
 	print temp2.shape
 	for i in range(0,39): #0:39
