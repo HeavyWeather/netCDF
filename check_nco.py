@@ -1,4 +1,6 @@
 def check_nco_available():
+    """ simple command for nco checking, with error reporting specific to the Eddie supercomputing cluster. 
+    For more info on nco: http://nco.sourceforge.net/"""
     import subprocess,sys
     try:
         subprocess.Popen(['ncap','--version'],stderr=subprocess.STDOUT,stdout=subprocess.PIPE).returncode
